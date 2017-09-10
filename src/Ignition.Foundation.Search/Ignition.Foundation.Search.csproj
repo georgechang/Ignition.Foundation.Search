@@ -86,11 +86,16 @@
     <Compile Include="Managers\SearchManagerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Results\ISearchOptions.cs" />
-    <Compile Include="Results\IIgnitionSearchResult.cs" />
+    <Compile Include="Results\IgnitionSearchResultItem.cs" />
     <Compile Include="Results\SearchOptions.cs" />
+    <Compile Include="Sort\DateSortByFieldAttribute.cs" />
+    <Compile Include="Sort\ISortByFieldAttribute.cs" />
+    <Compile Include="Sort\ISortByMethodFactory.cs" />
+    <Compile Include="Sort\RelevanceSortByFieldAttribute.cs" />
     <Compile Include="Sort\SortByMethod.cs" />
     <Compile Include="Sort\ISortByMethod.cs" />
     <Compile Include="Sort\SortByFieldAttribute.cs" />
+    <Compile Include="Sort\SortByMethodFactory.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
