@@ -16,7 +16,7 @@ namespace Ignition.Foundation.Search.Sort
 
         public ISortByMethod GetSortByMethod<T>() where T : ISortByFieldAttribute
         {
-            
+            return null;
         }
     }
 }

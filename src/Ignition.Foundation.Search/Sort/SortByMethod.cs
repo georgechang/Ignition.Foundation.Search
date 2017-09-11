@@ -17,7 +17,7 @@ namespace Ignition.Foundation.Search.Sort
             _sortByAttribute = sortByAttribute;
         }
 
-        public IEnumerable<T> SortResults<T, TU>(IOrderedEnumerable<T> results)
+        public IEnumerable<T> SortResults<T, TU>(IOrderedEnumerable<T> results) where T : IgnitionSearchResultItem
         {
             var sortFields = new List<Expression<Func<T, TU>>>();
             var properties = typeof(T).GetProperties();

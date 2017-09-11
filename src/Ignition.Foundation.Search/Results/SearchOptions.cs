@@ -8,15 +8,13 @@ namespace Ignition.Foundation.Search.Results
 {
     public class IgnitionSearchOptions<T> : ISearchOptions<T>
     {
-        private ISortByMethod _sortByMethod;
-
-        public IgnitionSearchOptions(ISortByMethod sortByMethod)
-        {
-            _sortByMethod = sortByMethod;
-        }
-
+        public string Query { get; set; }
         public Expression<Func<T, bool>> Predicate { get; set; }
         public CultureInfo CultureInfo { get; set; }
         public Expression<Func<T, bool>> Filter { get; set; }
+        public int? PageNumber { get; set; }
+        public int? ResultsPerPage { get; set; }
+        public Expression<Func<T, object>> OrderByExpression { get; set; }
+        public OrderByDirection OrderByDirection { get; set; }
     }
 }

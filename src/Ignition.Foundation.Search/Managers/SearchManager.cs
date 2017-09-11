@@ -27,7 +27,7 @@ namespace Ignition.Foundation.Search.Managers
 
         public ISearchOptions<T> CreateSearchOptions<T>() => _searchOptionsFactory.CreateSearchOptions<T>();
 
-        public IEnumerable<T> GetSearchResults<T>(CultureInfo cultureInfo, Expression<Func<T, bool>> predicate = null)
+        public SearchResults<T> GetSearchResults<T>(CultureInfo cultureInfo, Expression<Func<T, bool>> predicate = null) where T : SearchResultItem
         {
             var options = _searchOptionsFactory.CreateSearchOptions<T>();
             options.CultureInfo = cultureInfo;
@@ -35,7 +35,7 @@ namespace Ignition.Foundation.Search.Managers
             return GetSearchResults(options);
         }
 
-        public IEnumerable<T> GetSearchResults<T>(ISearchOptions<T> options)
+        public SearchResults<T> GetSearchResults<T>(ISearchOptions<T> options) where T : SearchResultItem
         {
             using (var context = _index.GetSearchContext())
             {
@@ -50,8 +50,18 @@ namespace Ignition.Foundation.Search.Managers
                     results = results.Where(options.Predicate);
 
                 // sort
+                if (options.OrderByDirection == OrderByDirection.Ascending)
+                    results = results.OrderBy(options.OrderByExpression);
+                if (options.OrderByDirection == OrderByDirection.Descending)
+                    results = results.OrderByDescending(options.OrderByExpression);
 
-                return results.ToList();
+                // pagination
+                if (options.PageNumber.HasValue && options.ResultsPerPage.HasValue)
+                    results = results.Skip(options.PageNumber.Value * options.ResultsPerPage.Value);
+                if (options.ResultsPerPage.HasValue)
+                    results = results.Take(options.ResultsPerPage.Value);
+
+                return results.GetResults();
             }
         }
     }

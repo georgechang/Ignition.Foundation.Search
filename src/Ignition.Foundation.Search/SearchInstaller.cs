@@ -14,7 +14,7 @@ namespace Ignition.Foundation.Search
             container.Register<ISearchManagerFactory, SearchManagerFactory>(Lifestyle.Transient);
             container.Register<ISearchContextFactory, SearchContextFactory>(Lifestyle.Transient);
             container.Register<ISearchOptionsFactory, SearchOptionsFactory>(Lifestyle.Transient);
-            container.Register<ISortByMethod, SortByMethod>(Lifestyle.Scoped);
+            //container.Register<ISortByMethod, SortByMethod>(Lifestyle.Scoped);
         }
     }
 }
