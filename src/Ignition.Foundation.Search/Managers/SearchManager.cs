@@ -50,14 +50,14 @@ namespace Ignition.Foundation.Search.Managers
                     results = results.Where(options.Predicate);
 
                 // sort
-                if (options.OrderByDirection == OrderByDirection.Ascending)
+                if (options.OrderByDirection == OrderByDirection.Ascending && options.OrderByExpression != null)
                     results = results.OrderBy(options.OrderByExpression);
-                if (options.OrderByDirection == OrderByDirection.Descending)
+                if (options.OrderByDirection == OrderByDirection.Descending && options.OrderByExpression != null)
                     results = results.OrderByDescending(options.OrderByExpression);
 
                 // pagination
                 if (options.PageNumber.HasValue && options.ResultsPerPage.HasValue)
-                    results = results.Skip(options.PageNumber.Value * options.ResultsPerPage.Value);
+                    results = results.Skip((options.PageNumber.Value - 1) * options.ResultsPerPage.Value);
                 if (options.ResultsPerPage.HasValue)
                     results = results.Take(options.ResultsPerPage.Value);
 

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignition.Foundation.Search", "Ignition.Foundation.Search\Ignition.Foundation.Search.csproj", "{2C8A463E-2585-4EE9-93C1-AAF2AFBD1DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignition.Foundation.Search.ComputedFields", "Ignition.Foundation.Search.ComputedFields\Ignition.Foundation.Search.ComputedFields.csproj", "{8E04635C-91AE-4698-BFF8-98AC98E4563C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2C8A463E-2585-4EE9-93C1-AAF2AFBD1DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C8A463E-2585-4EE9-93C1-AAF2AFBD1DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C8A463E-2585-4EE9-93C1-AAF2AFBD1DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E04635C-91AE-4698-BFF8-98AC98E4563C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E04635C-91AE-4698-BFF8-98AC98E4563C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E04635C-91AE-4698-BFF8-98AC98E4563C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E04635C-91AE-4698-BFF8-98AC98E4563C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
