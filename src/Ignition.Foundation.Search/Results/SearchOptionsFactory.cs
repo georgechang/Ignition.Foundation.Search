@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ignition.Foundation.Search.Sort;
-
-namespace Ignition.Foundation.Search.Results
+﻿namespace Ignition.Foundation.Search.Results
 {
     public class SearchOptionsFactory : ISearchOptionsFactory
     {

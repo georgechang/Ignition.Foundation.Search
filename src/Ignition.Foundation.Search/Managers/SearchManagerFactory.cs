@@ -1,5 +1,4 @@
 ﻿using System;
-using Glass.Mapper.Sc;
 using Ignition.Foundation.Search.Context;
 using Ignition.Foundation.Search.Indexes;
 using Ignition.Foundation.Search.Results;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Xml;
-
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.ComputedFields;
 using Sitecore.Data.Fields;
